@@ -115,6 +115,38 @@ export async function updateInvoice(
     redirect('/dashboard/invoices');
   }
 
+  // export async function orderInvoice() {
+  //   try {
+  //     await sql`
+  //     SELECT * FROM invoice ORDER BY date DESC
+  //     `;
+  //     revalidatePath('/dashboard/invoices');
+  //     return { message: 'Ordered by Date.' };
+  //   } catch (error) {
+  //     return { message: 'Database Error: Failed to Order Invoice.' };
+  //   }
+  // }
+  
+
+//   const btnOrdenarPorPreco = document.getElementById('btnOrdenarPorPreco')
+// btnOrdenarPorPreco.addEventListener('click', ordenarPreco)
+// let crescente = false
+
+//   export async function ordenarPreco() {
+//     let livrosOrdenados
+
+//     if (crescente) {
+//       livrosOrdenados = livros.sort((a, b) => b.preco - a.preco)
+//       crescente = false
+//       return 'Decendent';  
+//     } else {
+//       livrosOrdenados = livros.sort((a, b) => a.preco - b.preco)
+//       crescente = true
+//       return 'Ascendent';  
+//     }
+//   }
+
+
   export async function authenticate(
     prevState: string | undefined,
     formData: FormData,

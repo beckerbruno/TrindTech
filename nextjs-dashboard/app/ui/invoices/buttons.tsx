@@ -1,6 +1,7 @@
 import { PencilIcon, PlusIcon, TrashIcon, ArrowsUpDownIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { deleteInvoice } from '@/app/lib/actions';
+// import { deleteInvoice, orderInvoice } from '@/app/lib/actions';
 
 export function CreateStudent() {
   return (
@@ -39,9 +40,13 @@ export function DeleteInvoice({ id }: { id: string }) {
 }
 
 export function OrderInvoice() { 
+  // const handleOrderInvoice = async () => {
+  //   const result = await orderInvoice(); // Chama a função orderInvoice quando o botão é clicado
+  //   console.log(result.message); // Exibe a mensagem de retorno no console, você pode tratar de acordo com sua necessidade
+  // };
   return (
-    <form>
-      <button className="rounded-md border p-2 hover:bg-gray-100">
+    <form> {/*onSubmit={(e) => e.preventDefault()}*/}
+      <button className="rounded-md border p-2 hover:bg-gray-100"> {/* onClick={handleOrderInvoice} */}
         <span className="sr-only">Order</span>
         <ArrowsUpDownIcon className="w-4" />
       </button>
